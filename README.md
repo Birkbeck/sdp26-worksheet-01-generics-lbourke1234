@@ -156,7 +156,8 @@ with
 
 + Compile the code again. Does it still compile? Why not?
 
-  ** YOUR ANSWER HERE **
+  It does not compile because the storage object being passed as an argument to the test method
++ does not match the parameter that test expects. This ensures our program is type safe. 
 
 4. Study the code in class `Example4`.
 
