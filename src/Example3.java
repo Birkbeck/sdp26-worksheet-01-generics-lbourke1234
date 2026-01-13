@@ -2,7 +2,7 @@ public class Example3 {
     public static void main(String[] args) {
         Storage<String> storage = new Storage<>();
         storage.setItem("Happy 2025!");
-        test(storage);
+//        test(storage);
     }
 
     public static void test(Storage<BankAccount> s) {

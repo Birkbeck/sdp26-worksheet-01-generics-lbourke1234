@@ -163,11 +163,11 @@ with
 
 + What is the type of variable `storage1`?
 
-  ** YOUR ANSWER HERE **
+  Storage<BankAccount>
 
 + Compile and run the code to make sure it can be executed successfully. What is the printed output?
 
-  ** YOUR ANSWER HERE **
+  Account 2024
 
 Add the following 3 lines to method `main`:
 
@@ -179,11 +179,11 @@ Add the following 3 lines to method `main`:
 
 + What is the type of variable `storage2`?
 
-  ** YOUR ANSWER HERE **
+  Storage<SavingsAccount>()
 
 + Compile the code. Does it compile? If not, what is the problem?
 
-  ** YOUR ANSWER HERE **
+  It does not compile because the process method expects Storage<BankAccount>
 
 + Fix the compile-time error, without changing the contents of method `main` and without any code duplication. 
 In other words, assume that users of your 
