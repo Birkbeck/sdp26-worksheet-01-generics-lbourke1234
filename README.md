@@ -32,12 +32,13 @@ creating two different storage objects with two different type specialisations:
    Storage<String> stringStorage = new Storage<String>();
    ```
    + What are the reasons for using generics here?
-   
-     ** YOUR ANSWER HERE **
+   The reason for using generics here is to set the type that each storage object accepts which leads to safer code.
    
    + What are the benefits?
-   
-     ** YOUR ANSWER HERE **
+
+             Benefits:
+                       1. The developer of the code can reduce duplicate code.
+                       2. It creates more flexible classes.
 
 Add the following code to your `Example1` class:
 
@@ -51,8 +52,8 @@ Add the following code to your `Example1` class:
    + Compile and analyse the compiler output.
    
    + What is the cause of the problems reported by the compiler, if any?
-   
-     ** YOUR ANSWER HERE **
+
+    The compiler can't put a type Object in a variable with type BankAccount
 
 Now replace:
 
@@ -65,12 +66,13 @@ Now replace:
    ```
    + How does this affect the compilation process?
    
-     ** YOUR ANSWER HERE **
+     Now the compiler has resoved the first Object -> BankAccount mismatch. 
+   + 
    
    + What is the problem, if any?
-   
-     ** YOUR ANSWER HERE **
-   
+
+     An Object doesn't have the method deposit so the compiler complains. Only the BankAccount object has the deposit method.
+
 Now replace 
 
    ```.java
@@ -85,7 +87,7 @@ with
 
    + Does it still compile?
 
-     ** YOUR ANSWER HERE **
+     It's the same issue but has cleaner syntax as type is inferred from the declaration on the left.
 
 Finally, replace
 
@@ -101,11 +103,12 @@ with
 
    + Does it still compile? If not, explain why.
 
-     ** YOUR ANSWER HERE **
+     This is the same issue but the type is inferred from 
 
    + How would you fix the error?
 
-     ** YOUR ANSWER HERE **
+     Change line 3 to var bankAccountStorage = new Storage<BankAccount>();
+   + Now the bankAccountStorage accepts the BankAccount and the compiler recognises the method when it's called. 
 
 
 2. In Java, arrays are **covariant**, which means that an array of type `T1[]` can be used in a context where 
