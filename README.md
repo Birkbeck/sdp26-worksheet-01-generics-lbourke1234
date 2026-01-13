@@ -132,7 +132,10 @@ with
 
 + Compile and run the code again. Does it still compile? Does it run? What is the output?
 
-  ** YOUR ANSWER HERE **
+  It does not compile because the array passed as an argument to test is a String array.
++ This makes the Object[] parameter happy because String is a subtype of Object. 
++ But a BankAccount is not a subtype of String so cannot be inserted into the String array. 
++ 
 
 3. Generics in Java, in contrast, are **invariant**, which means that the type parameters need to match exactly:
 `C<T1>` is **not** a subtype of `C<T2>` when `T1` is a subtype of `T2` (unless, of course, `T1` is the same as `T2`).
